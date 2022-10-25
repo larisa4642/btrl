@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="btrl\ipay\Block\Info">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item xsi:type="string" name="is_secure_mode">0</item>
+            </argument>
+        </arguments>
+    </type> 
+	<type name="Magento\Backend\Block\Widget\Button\Toolbar">
+        <plugin name="btrl_ipay::pluginBefore" type="btrl\ipay\Plugin\PluginBefore" />
+    </type> 
+	<virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="ipay_status" xsi:type="string">sales_order.ipay_status</item>
+                <item name="ipay_id" xsi:type="string">sales_order.ipay_id</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

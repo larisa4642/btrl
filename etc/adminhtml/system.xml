@@ -1,0 +1,73 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="btrl_ipay" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Plata prin BT iPay</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Activ</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Titlu</label>
+                </field>
+                <field id="merchant_username" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Username</label> 
+                </field>
+				<field id="merchant_pass" translate="label" type="text" sortOrder="32" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Parola</label> 
+                </field>
+                <field id="modultest" translate="label" type="text" sortOrder="85" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Modul test(1-test, 0-productie)</label> 
+                </field>
+				
+				 <field id="phase" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Plata One phase/Two phase (introduceti 1 sau 2)</label>
+                </field> 
+				
+				 <field id="status_comanda_noua" translate="label" type="select" sortOrder="85" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Status comanda noua</label>
+                    <source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
+                </field>
+				
+				 <field id="status_comanda" translate="label" type="select" sortOrder="85" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Status comanda dupa plata</label>
+                    <source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
+                </field> 
+				
+				 <field id="ds2_email" translate="label" type="text" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>3ds2 Email</label>
+                </field>
+				
+				 <field id="ds2_phone" translate="label" type="text" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>3ds2 Phone</label>
+                </field>
+				
+				 <field id="ds2_contact" translate="label" type="text" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>3ds2 Contact</label>
+                </field>
+				
+				 <field id="ds2_deliveryType" translate="label" type="text" sortOrder="240" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>3ds2 DeliveryType</label>
+                </field>
+				
+				 <field id="ds2_country" translate="label" type="text" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>3ds2 Country</label>
+                </field>
+				
+				 <field id="ds2_city" translate="label" type="text" sortOrder="260" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>3ds2 City</label>
+                </field>
+				
+				 <field id="ds2_postAddress" translate="label" type="text" sortOrder="270" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>3ds2 PostAddress</label>
+                </field>  
+                
+                <field id="sort_order" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+                    <label>Ordine afisare</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <btrl_ipay>
+                <model>btrl\ipay\Model\ipay</model>
+                <active>1</active>     
+				<status_comanda_noua>pending</status_comanda_noua>   
+				<status_comanda>complete</status_comanda>
+                <order_status>pending_payment</order_status>
+                <payment_action>authorize</payment_action>
+                <title>Plata online prin BT iPay</title>
+                <currency>RON</currency>
+                <phase>1</phase>
+				<group>offline</group>
+                <sort_order>1</sort_order>
+            </btrl_ipay>
+        </payment>
+    </default>
+</config>
+

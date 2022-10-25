@@ -1,0 +1,62 @@
+<script type='text/javascript'>
+
+    function ref_order(url, suma)
+	{
+	
+	var retVal = prompt("Suma care va fi rambursata(max " +suma+ " RON): ", suma); 
+		
+		url = url + '--' + retVal;
+		
+		//alert(retVal);
+	  if(retVal != null && retVal != 'null')	
+	  {
+		  
+	jQuery('#refbutton').html('Asteptati...');
+	 jQuery.get(url,  function(data) { jQuery('#refbutton').html(data); document.location.reload(); } )	 
+	  }
+	}
+
+
+	function fin_order(url, how)
+	{
+	
+	//alert(id + ' -- ' + how);	
+	
+    if(how == 'che')
+	{ 
+		
+	 jQuery.get(url,  function(data) { alert(data); } )	
+		
+	}
+	
+		
+	if(how == 'fin')
+	{
+	jQuery('#finbutton').html('Asteptati...');
+	jQuery('#revbutton').html('');
+		
+		
+	 jQuery.get(url,  function(data) { jQuery('#finbutton').html(data); document.location.reload(); } )	
+		
+	}
+	
+			
+	if(how == 'rev')
+	{
+	jQuery('#finbutton').html('');
+	jQuery('#revbutton').html('Asteptati...');
+		
+		
+	 jQuery.get(url,  function(data) { jQuery('#revbutton').html(data); document.location.reload(); } )	
+		
+	}
+	
+	
+		
+			
+ 
+		
+	}
+		
+
+</script>
